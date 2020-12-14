@@ -39,9 +39,9 @@ void CustomerUsingPropertyTable() {
     for(int id = (ID_START + 1); id < ID_MAX; id ++) {
         const TipProperty *property = GetTableProperty(id);
         if(property != nullptr) {
-            cout << "ID: \t"<< property->ID << endl;
+            cout << "ID:     \t"<< property->ID << endl;
             cout << "Global: \t" << property->global << endl;
-            cout << "prio: \t"   << property->prio << endl;
+            cout << "prio:   \t"   << property->prio << endl;
             cout << "time_min: \t" << property->time_min << endl;
             cout << "time_out: \t" << property->time_out << endl;
             cout << "close_when_move_to_home: \t" << property->close_when_move_to_home << endl;
