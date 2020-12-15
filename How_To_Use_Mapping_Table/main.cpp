@@ -1,6 +1,8 @@
 #include <iostream>
+#include <iomanip>
 #include "PropertyTable/TableToID.hpp"
 #include "PropertyTable/TableUsingMethod.hpp"
+#include "MatrixTable/MatrixTableUsingMethod.hpp"
 
 using namespace std;
 
@@ -15,6 +17,7 @@ void CustomerUsingMatrixTable();
 int main() {
 
     CustomerUsingPropertyTable();
+    cout << "===================================" << endl;
     CustomerUsingMatrixTable();
 
     return 0;
@@ -51,5 +54,12 @@ void CustomerUsingPropertyTable() {
 
 void CustomerUsingMatrixTable() {
 
+    for(int i = VERTICAL_0; i < VERTICAL_MAX; i++) {
+        for(int j = HORIZONTAL_0; j < HORIZONTAL_MAX; j++) {
+            cout << "0x"<< hex << GetTableItemStatus(i, j) << " second:" << GetTableItemSecondField(i, j) << "+" << "first:" << GetTableItemFirtstField(i, j) << "\t";
+        }
+        cout << "\n";
+    }
 
+    
 }
