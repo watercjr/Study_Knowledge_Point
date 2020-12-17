@@ -1,15 +1,17 @@
-BINDIR=./build
+BUILDDIR=./build
 CC=g++
 SRCS=$(wildcard *.cpp) #查找当前目录所有的.c
 CXXFLAGS=-std=c++11 -g -Wall
-TARGET=$(BINDIR)/main
+TARGET=$(BUILDDIR)/main
 
 # 需要在编译选项前加上 -g 选项
-$(TARGET):$(SRCS)
+$(TARGET):$(SRCS) $(BUILDDIR)
 	$(CC) $(SRCS) -o $(TARGET) $(CXXFLAGS)
 
-init:
-	mkdir build
+#all:$(BUILDDIR) $(TARGET)
+
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)
 
 clean:
-	rm build/ -r
+	rm $(BUILDDIR) -r
