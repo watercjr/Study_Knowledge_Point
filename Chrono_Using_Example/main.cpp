@@ -14,6 +14,7 @@ int main()
     seconds_type s_oneday(m_oneday);        // 86400s
     milliseconds_type ms_oneday(m_oneday); // 86400000ms
 
+    // count 用于返回period的数量
     std::cout << ms_oneday.count() << " ms\t in 1 day" << std::endl;
     std::cout << s_oneday.count() << " s\t\t in 1 day" << std::endl;
     std::cout << m_oneday.count() << " minutes\t in 1 day" << std::endl;
